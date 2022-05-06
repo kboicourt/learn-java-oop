@@ -1,5 +1,4 @@
 import com.sun.istack.internal.NotNull;
-import com.sun.org.apache.xpath.internal.operations.Or;
 
 import java.util.Optional;
 
@@ -7,11 +6,13 @@ public class Customer {
     private final String name;
     private final CreditCard creditCard;
     private final short expirationMonth;
+    private final short expirationYear;
 
-    public Customer(String name, long ccNumber, short expirationMonth) {
+    public Customer(String name, long ccNumber, short expirationMonth, short expirationYear) {
         this.name = name;
         this.expirationMonth = expirationMonth;
-        this.creditCard = new CreditCard(ccNumber, expirationMonth);
+        this.expirationYear = expirationYear;
+        this.creditCard = new CreditCard(ccNumber, expirationMonth, expirationYear);
     }
 
     public Optional<Order> checkout(@NotNull ShoppingCart cart) {
