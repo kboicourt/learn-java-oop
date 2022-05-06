@@ -6,10 +6,12 @@ import java.util.Optional;
 public class Customer {
     private final String name;
     private final CreditCard creditCard;
+    private final short expirationMonth;
 
-    public Customer(String name, long ccNumber) {
+    public Customer(String name, long ccNumber, short expirationMonth) {
         this.name = name;
-        this.creditCard = new CreditCard(ccNumber);
+        this.expirationMonth = expirationMonth;
+        this.creditCard = new CreditCard(ccNumber, expirationMonth);
     }
 
     public Optional<Order> checkout(@NotNull ShoppingCart cart) {

@@ -14,7 +14,8 @@ public class Demo {
         System.out.println(cart.getTotalCost());
 
         long ccNumber = 1234567894561234L;
-        Customer customer = new Customer("Kevin Boicourt", ccNumber);
+        short expirationMonth = 02;
+        Customer customer = new Customer("Kevin Boicourt", ccNumber, expirationMonth);
         Optional<Order> order = customer.checkout(cart);
 
         System.out.println(order);

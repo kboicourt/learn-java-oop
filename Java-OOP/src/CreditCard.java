@@ -3,9 +3,11 @@ import java.util.UUID;
 
 class CreditCard {
     private final long cardNumber;
+    private final short expirationMonth;
 
-    public CreditCard(long cardNumber) {
+    public CreditCard(long cardNumber, short expirationMonth) {
         this.cardNumber = cardNumber;
+        this.expirationMonth = expirationMonth;
     }
 
     public Optional<Payment> mkPayment(int value) {
