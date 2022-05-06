@@ -15,7 +15,9 @@ public class Demo {
 
         long ccNumber = 1234567894561234L;
         short expirationMonth = 02;
-        Customer customer = new Customer("Kevin Boicourt", ccNumber, expirationMonth);
+        short expirationYear = 27;
+
+        Customer customer = new Customer("Kevin Boicourt", ccNumber, expirationMonth, expirationYear);
         Optional<Order> order = customer.checkout(cart);
 
         System.out.println(order);
