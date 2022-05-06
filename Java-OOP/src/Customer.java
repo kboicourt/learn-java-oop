@@ -1,11 +1,11 @@
+import com.sun.istack.internal.NotNull;
 import com.sun.org.apache.xpath.internal.operations.Or;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.Optional;
 
 public class Customer {
     private final String name;
-    private CreditCard creditCard;
+    private final CreditCard creditCard;
 
     public Customer(String name, long ccNumber) {
         this.name = name;
