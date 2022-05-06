@@ -18,5 +18,6 @@ public class Demo {
         Optional<Order> order = customer.checkout(cart);
 
         System.out.println(order);
+
     }
 }
